@@ -1,8 +1,10 @@
 {% extends 'app/base.html' %}
 
-{% block contenido %}
+{% load static %}
+
+{% block content %}
     <div class="banner"> 
-        <img src="img/Restaurante-1024x575.jpg" alt"" title="" >
+        <img src="{% static 'app/img/Restaurante-1024x575.jpg' %}" alt"" title="" >
          <div class="contenedor">
         <h1 class="banner__titulo">RESTAURANTE SIGLO XXI</h1>
         <p class="banner__txt">Disfruta del placer</p>
@@ -14,19 +16,19 @@
              <section class="info">
                  <div class="contenedor">
           <article class="info__columna">
-            <img src="img/1.jpg" alt="" class="info__img">
+            <img src="{% static 'app/img/1.jpg' %}" alt="" class="info__img">
             <h2 class="info__titulo">Nuestra Casa</h2>
             <p class="info__txt">Nustra casa lleva varios años entregando el placer y el gusto de la buena comida,
                 lo cual vas a disfrutar con nuestros postres y platos de primera calidad.</p>
           </article>
           <article class="info__columna">
-            <img src="img/Reinitala plancha-1-600x600.jpg" alt="" class="info__img">
+            <img src="{% static 'app/img/Reinitala plancha-1-600x600.jpg' %}" alt="" class="info__img">
             <h2 class="info__titulo">Nuestros platos</h2>
             <p class="info__txt">La ESPECIALIDAD DE LA CASA  nuestros queridos platos con la mejor y preparación de nuestros Chef,
                 mostrando el placer de nuestra comida y casa.</p>
           </article>
           <article class="info__columna">
-            <img src="img/28525115_ajNCgD2tsjEn4Vb-eUgVUavMFBoC70enjRNKFYcMG-0.jpg" alt="" class="info__img">
+            <img src="{% static 'app/img/28525115_ajNCgD2tsjEn4Vb-eUgVUavMFBoC70enjRNKFYcMG-0.jpg' %}" alt="" class="info__img">
             <h2 class="info__titulo">Nuestra Vista</h2>
             <p class="info__txt">La vista de nuestro restaurante, es especial y preciosa con una gran vista al mar
                 que te llevara a relajarte y sentirte mucho más agusto.</p>
@@ -40,19 +42,19 @@
               <p class="platos__txt">Nuestros menus más descatables para nuestros ejecutivos.
                 Esto mostrando los placeres que se pueden variedades de nuestros menus</p> 
                 <div class="platos__columna">
-                  <img src="img/carne mechada.jpg" alt="" class="platos__img">
+                  <img src="{% static 'app/img/carne mechada.jpg' %}" alt="" class="platos__img">
                   <h3>Plato 1</h3>
                 </div>
                 <div class="platos__columna">
-                  <img src="img/RESTAURANT-DONDE-JL_BIFE-VACUNO-A-LO-POBRE-600x600.jpg" alt=""  class="platos__img">
+                  <img src="{% static 'app/img/RESTAURANT-DONDE-JL_BIFE-VACUNO-A-LO-POBRE-600x600.jpg' %}" alt=""  class="platos__img">
                   <h3>Plato 2</h3>
                 </div>
                 <div class="platos__columna">
-                  <img src="img/RESTAURANT-DONDE-JL_BIFE-DE-VACUNO-CON-ENSALADA-600x600.jpg" alt=""  class="platos__img">
+                  <img src="{% static 'app/img/RESTAURANT-DONDE-JL_BIFE-DE-VACUNO-CON-ENSALADA-600x600.jpg' %}" alt=""  class="platos__img">
                     <h3>Plato 3</h3>
                 </div>
                 <div class="platos__columna">
-                  <img src="img/Pastel de choco.jpg" alt=""  class="platos__img">
+                  <img src="{% static 'app/img/Pastel de choco.jpg' %}" alt=""  class="platos__img">
                   <h3>Plato 4</h3>
                 </div>
                 
@@ -69,9 +71,9 @@
     </main>
     <footer class="footer">
          <div class="social">
-            <img src="img/icono1.png" alt"" title="" >
-             <img src="img/icono2.png" alt"" title="" >
-             <img src="img/icono3.png" alt"" title="" >
+            <img src="{% static 'app/img/icono1.png' %}" alt"" title="" >
+             <img src="{% static 'app/img/icono2.png' %}" alt"" title="" >
+             <img src="{% static 'app/img/icono3.png' %}" alt"" title="" >
              </div>
          <p class="copy">&copy; Restaurante Siglo XXI</p>
          </footer>

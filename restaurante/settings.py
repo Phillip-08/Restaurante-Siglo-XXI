@@ -77,9 +77,9 @@ WSGI_APPLICATION = "restaurante.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': '127.0.0.1:1521/xe',
-        'USER': 'django',
-        'PASSWORD': 'django',
+        'NAME': '192.168.1.168:1521/xe',
+        'USER': 'SYSTEM',
+        'PASSWORD': 'admin',
         'TEST': {
             'USER': 'default_test',
             'TBLSPACE': 'default_test_tbls',
