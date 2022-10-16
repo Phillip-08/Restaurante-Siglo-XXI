@@ -7,3 +7,6 @@ def home(request):
 
 def menu(request):
     return render(request, 'app/menu.html')
+
+def contacto(request):
+    return render(request, 'app/contacto.html')
