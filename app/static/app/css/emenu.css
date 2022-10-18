@@ -1,3 +1,15 @@
+.menu-contenedor{
+    padding-top: 4rem;
+}
+
+.btn-verde{
+    background-color: #00A149;
+    color:#e1e1e1;
+    border: none;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
 .texto-platillos{
     text-align: center;
     font-size: 5rem;
