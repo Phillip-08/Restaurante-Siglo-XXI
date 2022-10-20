@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "app",
     "rest_framework",
+    "crispy_forms",
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -78,9 +81,9 @@ WSGI_APPLICATION = "restaurante.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
-        'NAME': '192.168.1.168:1521/xe',
-        'USER': 'SYSTEM',
-        'PASSWORD': 'admin',
+        'NAME': 'localhost:1521/xe',
+        'USER': 'c##restaurante',
+        'PASSWORD':'restaurante',
         'TEST': {
             'USER': 'default_test',
             'TBLSPACE': 'default_test_tbls',
@@ -118,6 +121,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
+
+EMAIL_BACKEND="django.core.mail.backends.smtp.emailBackend"
+EMAIL_HOST="smtp.gamil.com"
+EMAIL_USE_TLS=True
+EMAIL_PORT=587
+EMAIL_HOST_USER=""
+EMAIL_HOST_PASSWORD=""
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

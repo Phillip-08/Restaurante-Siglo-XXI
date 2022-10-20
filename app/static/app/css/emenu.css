@@ -1,16 +1,30 @@
+
 .menu-contenedor{
-    padding-top: 4rem;
+    padding-top: 4rem;  
 }
 
-.btn-verde{
+.btn-verde{ 
+    font-size: 62.5%;
+    font-family:'Times New Roman', Times, serif;
     background-color: #00A149;
     color:#e1e1e1;
+    font-size: 2rem;
+    text-transform: capitalize;
+    padding: 1rem 5rem;
+    border-radius: 1px;
     border: none;
     display: inline-block;
     margin-bottom: 2rem;
 }
 
+img{
+    box-sizing: border-box;
+    max-width: 300px;
+    width: max-content;
+}
+
 .texto-platillos{
+    font-family:'Times New Roman', Times, serif;
     text-align: center;
     font-size: 5rem;
 }
@@ -56,7 +70,7 @@
     justify-content: space-between;
 }
 .precio p{
-    font-weight: bold;
+    font-weight:bolder;
     font-size: 2rem;
 }
 .precio button{

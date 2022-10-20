@@ -1,75 +1,39 @@
 {% extends 'app/base.html' %}
 
+
+
+
+
 {% load static %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
 {% block content %}
+{% load crispy_forms_tags %}
 
-<div class="informacion-contacto">
-    <h3>Contactanos</h3>
-    <p><i class="fas fa-map-marker-alt"></i>23. Roma Italia 75012</p>
-    <p><i class="fas fa-envelope"></i> luca@turilli.it</p>
-    <p><i class="fas fa-phone-alt"></i>+31123410921</p>
-    <div class="redes-sociales">
-        <i class="fab fa-facebook-square"></i>
-        <i class="fab fa-twitter-square"></i>
-        <i class="fab fa-instagram"></i>
-    </div>
-</div>
+<div class="row">
+    <div class="col-12 col-md-6 offset-md-3">
+        <h2 style="text-align:center">Contactanos</h2>
+        <form style="text-align:center" saction="" class="" method="POST">
 
-<form class="formulario">
-    <div class="input-formulario">
-        <label for="nombre">Nombre</label>
-        <input type="text" placeholder="Pedro" id="nombre">
-    </div>
-    <div class="input-formulario">
-        <label for="apellidos">Apellido</label>
-        <input type="text" placeholder="Pedro" id="apellidos">
-    </div>
-    <div class="input-formulario">
-        <label for="correo">Correo</label>
-        <input type="email" placeholder="ejemplo@ejemplo.com" id="correo">
-    </div>
-    <div class="input-formulario">
-        <label for="telefono">Teléfono</label>
-        <input type="tel" placeholder="+90 543 779 9410" id="telefono">
-    </div>
-    <div class="input-formulario">
-        <label for="mensaje">Mensaje</label>
-        <textarea></textarea>
-    </div>
-    <div class="btn-formulario">
-        <input type="submit" class="btn btn-verde" value="Enviar">
-    </div>
+        {% csrf_token %}
     
-</form>
-</div>
-<div class="pie-pagina ">
-<div class="contenedor-piepagina contenedor">
-    <div class="info">
-        <h3>Dirección</h3>
-        <p>23.Roma Italia 75012</p>
-    </div>
-    <div class="info">
-        <h3>Días especiales</h3>
-        <p>Sabados y Jueves 7am - 11pm</p>
-        <p>+3123410921</p>
-    </div>
-    <div class="info">
-        <h3>Horarios</h3>
-        <p>Lunes - Domingo 7am - 11pm</p>
-        <div class="redes-sociales redes-pie">
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-twitter-square"></i>
-            <i class="fab fa-instagram"></i>
-        </div>
-    </div>
-    <div class="info">
-        <h3>Noticias</h3>
-        <p>suscribete para recibir más noticias</p>
-        <input type="email" placeholder="Tu correo">
-        <input type="submit" class="btn btn-verde" value="Suscribirse">
-    </div>
-</div>
-</div
+        {{ form | crispy }}
 
+        <br>
+        <div class="d-flex justify-content-end">
+            <input type="reset" value="Cancelar" class="btn btn_secondary">
+            &nbsp;
+            <button type="submit" id="btnEnviar" class="btn btn-primary">Enviar</button>
+        </div> 
+        <br>       
+</form>
+{{mensaje}}
+
+    </div>
+
+</div>
+
+<table id="tablacontactos">
+
+</table>
 {% endblock %}
