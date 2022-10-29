@@ -1,3 +1,4 @@
+from pyexpat import model
 from unittest.util import _MAX_LENGTH
 from django.db import models
 
@@ -23,20 +24,21 @@ class Contacto(models.Model):
 class categoria(models.Model):
     nombre = models.CharField(max_length=50)
 
-    def _str_(self):
+    def __str__(self):
         return self.nombre
 class Producto(models.Model):
     nombre = models.CharField(max_length=50)
     precio = models.IntegerField()
-    ingredientes = models.CharField(max_length=100)
+    descripcion = models.TextField()
     categoria = models.ForeignKey(categoria, on_delete=models.PROTECT)
+   
 
-    def _str_(self):
+    def __str__(self):
         return self.nombre
 
 class Ingredientes(models.Model):
     nombre = models.CharField(max_length=50)
     cantidad = models.IntegerField()
 
-    def _str_(self):
+    def __str__(self):
         return self.nombre

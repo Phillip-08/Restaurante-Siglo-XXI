@@ -1,9 +1,14 @@
+
 *{
-    margin: 0;
     box-sizing: border-box;
+    position: relative;
 }
 body{
+    margin: 0;
     font-family: sans-serif; 
+    
+    padding-bottom: 3em;
+    min-height: 100vh;
 }
 .main img{
 
@@ -82,6 +87,12 @@ body{
     width: 100%;
    
 }
+
+.banner video{
+    width: 100%;
+    height: 100%;
+}
+
 .banner {
    position: relative;
 		
@@ -155,12 +166,15 @@ body{
 .footer{
     background: #000;
     color: #fff;
-    padding: 10px;
+    padding: 1em 0;
     text-align: center;
+    position:absolute;
+    bottom: 0px;
+    width: 100%;
+    
 }
 .footer img{
     width: 50px;
-  
     margin-right: 10px;
 
 }

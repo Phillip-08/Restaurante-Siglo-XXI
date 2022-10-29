@@ -27,22 +27,30 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+MESSAGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
+
 
 # Application definition
 
 INSTALLED_APPS = [
+    "admin_interface",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.humanize",
     "app",
     "rest_framework",
     "crispy_forms",
+    "colorfield",
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# only if django version >= 3.0
+X_FRAME_OPTIONS = "SAMEORIGIN"
+SILENCED_SYSTEM_CHECKS = ["security.W019"]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -120,7 +128,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
+
+import os
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 EMAIL_BACKEND="django.core.mail.backends.smtp.emailBackend"
 EMAIL_HOST="smtp.gamil.com"
