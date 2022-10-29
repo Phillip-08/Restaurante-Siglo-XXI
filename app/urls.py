@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import home, menu, contacto, agregar_producto, listar_producto,modificar_producto, eliminar_producto, ProductoViewset
+from .views import home, menu, contacto, agregar_producto, listar_producto,modificar_producto, eliminar_producto, login, ProductoViewset
 from rest_framework import routers
 
 router = routers.DefaultRouter()

@@ -22,6 +22,15 @@
             <li class="menu__item"><a  class="menu__link" href="{% url 'menu'%}">Menu</a></li>
             <li class="menu__item"><a  class="menu__link">Fotos</a></li>
             <li class="menu__item"><a  class="menu__link" href="{% url 'contacto'%}">Contacto</a></li>
+            {% if user.is_authenticated %}
+            <li>
+              <a href="{% url 'logout' %}">Cerrar Sessión</a>
+            </li>
+            {% else %}
+            <li>
+              <a href="{% url 'login' %}">Iniciar Sección</a>
+            </li>
+            {% endif %}
           </ul>
         </nav>
       </div>

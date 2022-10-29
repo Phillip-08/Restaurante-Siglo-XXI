@@ -1,0 +1,36 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+  
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+    <div class="login-box">
+        <div class="row">
+            <div class="col-md-12">
+        
+                <img class="avatar"src="{% static 'img/logoCelesteBici.png'%}" alt="logo">
+                <h1>Entre Aquí</h1>
+                <form id="form-nuevousuario" method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+                    
+                    <input type="submit" value="Ingresar" >
+
+                    <a href="{% url 'password_reset'%}">¿A perdido su contraseña?</a>
+                    <br>
+                    
+                    
+                </form>
+                
+            </div>
+
+        </div>
+        
+    </div>
+<script src="{% static 'js/validacion.js' %}"></script>
+{% endblock %}
+    
+    
