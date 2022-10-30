@@ -23,12 +23,15 @@
             <li class="menu__item"><a  class="menu__link">Fotos</a></li>
             <li class="menu__item"><a  class="menu__link" href="{% url 'contacto'%}">Contacto</a></li>
             {% if user.is_authenticated %}
-            <li>
-              <a href="{% url 'logout' %}">Cerrar Sessión</a>
+            <li class="menu__item">
+              <a class="menu__link" href="{% url 'logout' %}">Cerrar Sessión</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">{{ user.username }}</a>
             </li>
             {% else %}
-            <li>
-              <a href="{% url 'login' %}">Iniciar Sección</a>
+            <li class="menu__item">
+              <a class="menu__link" href="{% url 'login' %}">Iniciar Sección</a>
             </li>
             {% endif %}
           </ul>

@@ -22,6 +22,9 @@ def home(request):
 def menu(request):
     return render(request, 'app/menu.html')
 
+def registro(request):
+    return render(request, 'registration/registro.html')
+
 def contacto(request):
     data = {
         'form': ContactoForm()

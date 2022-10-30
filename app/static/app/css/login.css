@@ -76,3 +76,14 @@ body{
 .login-box a:hover{
     color: white;
 }
+@media(min-width: 480px) {
+    .login-box{
+        display: inline-block;
+    }
+    .login-box .avatar{
+        display: inline-block;
+    }
+    .login-box button{
+        flex: unset;
+    }
+}

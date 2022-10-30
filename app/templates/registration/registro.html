@@ -1,5 +1,5 @@
 
-{% extends 'base.html' %}
+{% extends 'app/base.html' %}
 {% load static %}
     
       
@@ -17,9 +17,7 @@
            <div class="col-xl-7 col-lg-12 d-flex">
                 <div class="container align-self-center p-6">
                     <h1 class="font-weight-bold mb-3">Registrate</h1>
-                    <div class="form-group">
-                        <a href="{% url 'social:begin' 'facebook' %}" class="btn btn-outline-dark d-inline-block text-light mb-3 width-100"><i class="icon ion-logo-facebook lead align-middle mr-2"></i> Registrate con Facebook</a>
-                    </div>
+                    
                     <p class="text-muted mb-5">Ingresa la siguiente información para registrarte.</p>
 
                     <form id="form" method="POST">
@@ -32,7 +30,7 @@
                         <p class="warnings" id="warnings"></p>
                     </form>
                     <div id = 'error'></div>
-                    <small class="d-inline-block text-muted mt-5">Todos los derechos reservados | © 2020 BikeRent</small>
+                    <small class="d-inline-block text-muted mt-5">Todos los derechos reservados | © 2022 Restaurante XXI</small>
                 </div>
            </div>
        </div>
