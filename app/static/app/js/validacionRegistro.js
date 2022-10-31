@@ -39,9 +39,6 @@ function btnregistro(){
 }
 
 
-
-
-
 $(document).ready(function(){
     $('#form-nuevousuario').validate({
         debug: true,

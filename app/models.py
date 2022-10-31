@@ -1,6 +1,7 @@
 from pyexpat import model
 from unittest.util import _MAX_LENGTH
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
@@ -42,3 +43,20 @@ class Ingredientes(models.Model):
 
     def __str__(self):
         return self.nombre
+
+class Registro(models.Model):
+    nombre = models.CharField(max_length=50)
+    apellido = models.CharField(max_length=50)
+    rut = models.IntegerField(null=False, blank=False, primary_key=True)
+    nombre_usario = models.CharField(max_length=20, blank= False, null= False)
+    comuna = models.CharField(max_length=20)
+    telefono = models.IntegerField()
+    email = models.EmailField()
+    password =models.CharField(max_length=20, blank= False, null= False)
+    creacion_usr = models.DateTimeField(default=timezone.now)
+
+    class Meta:
+        ordering = ['-rut']
+
+    def __str__(self):
+        return self.nombre   
