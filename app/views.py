@@ -19,6 +19,14 @@ from django.contrib.auth.decorators import login_required, permission_required
 class ProductoViewset(viewsets.ModelViewSet):
     serializer_class = ProductoSerializer
     queryset = Producto.objects.all()
+
+    def get_queryset(self):
+        producto = Producto.objects.all()
+        nombre = self.request.GET.get('nombre')
+
+        if nombre:
+            producto = producto.filter(nombre__contains = nombre)
+        return producto
     
 def home(request):
     return render(request, 'app/home.html')

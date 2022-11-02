@@ -24,12 +24,12 @@
             <li class="menu__item"><a  class="menu__link" href="{% url 'contacto'%}">Contacto</a></li>
             {% if perms.app.add_producto %}
             <li class="menu__item">
-              <a class="menu__link" href="{% url 'agregar_producto' %}">Agregar Producto</a>
+              <a class="menu__link" href="{% url 'agregar_producto' %}">Agregar Menu</a>
             </li>
             {% endif %}
             {% if perms.app.view_producto %}
             <li class="menu__item">
-              <a class="menu__link" href="{% url 'listar_producto' %}">Listar Producto</a>
+              <a class="menu__link" href="{% url 'listar_producto' %}">Listado de Menu</a>
             </li>
             {% endif %}
             {% if user.is_authenticated %}

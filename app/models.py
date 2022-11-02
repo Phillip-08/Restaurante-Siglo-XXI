@@ -21,7 +21,6 @@ class Contacto(models.Model):
     def __str__(self) -> str:
         return self.nombre
 
-
 class categoria(models.Model):
     nombre = models.CharField(max_length=50)
 
@@ -31,6 +30,7 @@ class Producto(models.Model):
     nombre = models.CharField(max_length=50)
     precio = models.IntegerField()
     descripcion = models.TextField()
+    imagen = models.ImageField(upload_to="producto", null=True)
     categoria = models.ForeignKey(categoria, on_delete=models.PROTECT)
    
 
